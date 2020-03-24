@@ -1,0 +1,120 @@
+[
+    {   
+        "question":    "Hvor skal applikasjonen kjøres?",
+        "answers": [
+            {
+                "answer": "Web (intranett/internett)",
+                "bulletpoints": [
+                    {
+                        "t": "Utvikling",
+                        "p": [
+                            "Husk HTTPS! <a href=\"https://scotthelme.co.uk/https-deployment-tips/\" target=\"_blank\">More</a>", 
+                            "Husk logging, men vær obs på hva du logger! <a href=\"https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html\" target=\"_blank\">More</a> "
+                        ]
+                    }
+                ],
+                "question": "Hvordan skal den hostes?",
+                "answers": [
+                    {
+                        "answer": "Sky",
+                        "bulletpoints": [
+                            {
+                                "t": "Utvikling",
+                                "p": [
+                                    "Si noe lurt om skyhosting her!",
+                                    "Si noe annet lurt om skyhosting"
+                                ]
+                            }, 
+                            {
+                                "t": "Testing",
+                                "p": [
+                                    "Si noe lurt om testing og skyen her!"
+                                ]
+                            },
+                            {
+                                "t": "Personvern",
+                                "p": [
+                                    "Her må vi ha noe lurt om personvern og skyer. Kjipt om skyen lekker..."
+                                ]
+                            }
+                        ]
+                    }, 
+                    {
+                        "answer": "Hos kunde",
+                        "bulletpoints": [
+                            {
+                                "t": "Drift/Forvaltning",
+                                "p": [
+                                    "Er det avklart hvem som er ansvarlig for sikkerhetshendelser?",
+                                    "Er rutinene avklart mtp oppdatering av bibliotek/dependencies/OS?"
+                                ]
+                            }, 
+                            {
+                                "t": "Testing",
+                                "p": [
+                                    "Er det avklart hvem som er ansvarlig for test og deployment?"
+                                ]
+                            }
+                            
+                        ]
+                    }, 
+                    {
+                        "answer": "Hos tredjepart",
+                        "bulletpoints": [
+                            {
+                                "t": "Drift/Forvaltning",
+                                "p": [
+                                    "Er det avklart hvem som er ansvarlig for sikkerhetshendelser?",
+                                    "Er rutinene avklart mtp oppdatering av bibliotek/dependencies/OS?"
+                                ]
+                            }, 
+                            {
+                                "t": "Testing",
+                                "p": [
+                                    "Er det avklart hvem som er ansvarlig for test og deployment?"
+                                ]
+                            },
+                            {
+                                "t": "Personvern",
+                                "p": [
+                                    "Har tredjepart databehandleravtale?"
+                                ]
+                            },
+                        ]
+                    }
+            }, 
+            {
+                "answer": "Lokalt på en EDB-maskin",
+                "bulletpoints": [
+                    {
+                        "t": "Utvikling",
+                        "p": ["Er ansvar for sikkerhetstesting og deployment avklart med kunde?"]
+                    }
+                ]
+            }
+        ]
+    },
+    {   
+        "question":    "Benytter prosjektet tredjepartsbibilotek?",
+        "answers": [
+            {
+                "answer": "Ja",
+                "bulletpoints": [
+                    {
+                        "t": "Utvikling",
+                        "p": ["Risikovurder tredjepartsbibliotek og kilder for disse!"]
+                    }
+                ]
+            },
+            {
+                "answer": "Nei",
+                "bulletpoints": [
+                    {
+                        "t": "Utvikling",
+                        "p": ["Ved å bruke tredjepartsbibliotek introduserer du potensielle sårbarheter som skaper jobbsikkerhet. Prøv igjen!"]
+                    }
+                ]
+            }
+        ]
+    },
+]
