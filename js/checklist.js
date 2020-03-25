@@ -144,6 +144,7 @@ function getAnswers(jsObj){
     }
 
     var subOl = document.createElement("ol");
+    subOl.setAttribute('class', 'l_q');
     var subOlWasSet = false;
 
     // ett spm har 1+ svar under, hvert svar kan ha nye spm:
@@ -192,6 +193,7 @@ function getQuestions(jsObj){
     liNode.appendChild(liText);
     
     var subOl = document.createElement("ol");
+    subOl.setAttribute('class', 'l_a');
     var subOlWasSet = false;
 
     // ett spm har 1+ svar under, hvert svar kan ha nye spm:
@@ -264,6 +266,20 @@ function printChecklist(){
 // Jeg er lat, finnes sikkert enklere måter å gjøre dette på uten jquery... 
 $(document).ready(function(){
     $('input[type=checkbox]').on('change', function(){
+         // Vis/skjul subnoder:
+         if(this.checked){
+            $(this).parent().find('ol.l_q').slideDown();
+        }
+
+        if(!this.checked){
+            $(this).parent().find('ol.l_q').slideUp(); 
+            //uncheck alle elementer under denne noden:
+
+            $(this).parent().find('ol.l_q li input[type=checkbox]').prop('checked', false);
+        }
+        
+        
+        // Generer sjekklista
         checklist = {}
 
         var checked = $('input:checkbox:checked');
@@ -275,5 +291,8 @@ $(document).ready(function(){
         }
 
         printChecklist();
+
+
+       
     });
 });
